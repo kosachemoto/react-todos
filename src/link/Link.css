@@ -1,0 +1,8 @@
+.link {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.link:hover {
+  background-color: tan;
+}
