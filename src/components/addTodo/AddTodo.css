@@ -1,0 +1,10 @@
+.add-todo {
+  width: 300px;
+  padding: 15px;
+  margin-bottom: 5px;
+  background-color: plum;
+}
+
+.add-todo__input {
+  width: 100%;
+}
