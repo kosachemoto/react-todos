@@ -1,13 +1,15 @@
 import React from 'react';
 import './Todo.css';
 
-function Todo({data}) {
+function Todo({data, onClick}) {
 
   const message = data.text;
   const status = data.completed ? "COMPLETED" : "UNCOMPLETED";
 
   return (
-    <div className={"todo " + (data.completed ? "todo_completed" : "todo_uncompleted")}>
+    <div 
+      className={"todo " + (data.completed ? "todo_completed" : "todo_uncompleted")}
+      onClick={onClick}>
       <div>
         {message}
       </div>

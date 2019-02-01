@@ -9,6 +9,7 @@ import Filter from './components/filter/Filter';
 import TodoListHOC from './containers/todoListHOC/TodoListHOC';
 import AddTodo from './components/addTodo/AddTodo';
 import AddTodoHOC from './containers/addTodoHOC/AddTodoHOC';
+import FilterHOC from './containers/filterHOC/FilterHOC';
 class App extends Component {
   render() {
     return (
@@ -16,7 +17,7 @@ class App extends Component {
         <h1>Todos:</h1>
         <AddTodoHOC />
         <TodoListHOC />
-        <Filter />
+        <FilterHOC />
       </div>
     );
   }

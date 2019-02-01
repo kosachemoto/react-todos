@@ -4,7 +4,7 @@ import AddTodo from './../../components/addTodo/AddTodo';
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onAddTodo: (text) => { dispatch(addTodo(text)) }
+    onAddTodo: (text) => { console.log("add todo"); dispatch(addTodo(text)) }
   }
 }
 

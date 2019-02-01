@@ -2,11 +2,23 @@ export const ADD_TODO = "ADD_TODO";
 export const TOGGLE_TODO = "TOGGLE_TODO";
 export const SET_VISIBILITY_FILTER = "SET_VISIBILITY_FILTER";
 
-export const VisibilityFilters = {
-  SHOW_ALL: "SHOW_ALL",
-  SHOW_COMPLETED: "SHOW_COMPLETED",
-  SHOW_ACTIVE: "SHOW_ACTIVE"
-}
+export const VisibilityFilters = [
+  {
+    id: "499994cb-fce3-4ada-a9ca-30ce14f92636",
+    name: "SHOW_ALL",
+    title: "Show All"
+  },
+  {
+    id: "bac531db-9d0c-4a04-b9ee-454f37984a4a",
+    name: "SHOW_COMPLETED",
+    title: "Show Completed"
+  },
+  {
+    id: "a38a80de-ff06-4fe8-a690-93d502180ba7",
+    name: "SHOW_ACTIVE",
+    title: "Show Active"
+  }
+]
 
 export function addTodo(text) {
   return {
@@ -15,10 +27,10 @@ export function addTodo(text) {
   }
 }
 
-export function toggleTodo(index) {
+export function toggleTodo(id) {
   return {
     type: TOGGLE_TODO,
-    index
+    id
   }
 }
 
