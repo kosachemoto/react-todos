@@ -1,8 +1,8 @@
-.link {
+.filter-link {
   display: inline-block;
   cursor: pointer;
 }
 
-.link:hover {
+.filter-link:hover {
   background-color: tan;
 }

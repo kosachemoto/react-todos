@@ -1,6 +1,6 @@
 import React from 'react';
 import './Filter.css';
-import Link from './../link/Link';
+import FilterLink from './../filterLink/FilterLink';
 import { VisibilityFilters } from './../../actions.js';
 
 function Filter({setVisibilityFilter}) {
@@ -11,7 +11,7 @@ function Filter({setVisibilityFilter}) {
       </div>
       {VisibilityFilters.map(filter => {
         return (
-          <Link 
+          <FilterLink
           key={filter.id} 
           title={filter.title} 
           filter={filter.name}
