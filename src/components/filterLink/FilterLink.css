@@ -1,8 +1,22 @@
+.filter {
+  margin-bottom: 5px;
+}
+
 .filter-link {
-  display: inline-block;
+  transition: background-color .075s;
+  display: block;
   cursor: pointer;
+  padding: 5px;
+  background-color: tan;
+  color: black;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+
+.filter-link:last-child {
+  margin-bottom: 0px;
 }
 
 .filter-link:hover {
-  background-color: tan;
+  background-color: #dcc097;
 }

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Todo from './../todo/Todo';
 // import TodoHOC from './../../containers/todoHOC/TodoHOC';
 
-function TodoList({todos, toggleTodo}) {
+function TodoList({todos, toggleTodo, filter}) {
   return (
     <>
       {todos.map((todo, index) => {

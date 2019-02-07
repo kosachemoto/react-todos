@@ -11,10 +11,6 @@ import Root from './components/root/Root';
 
 let store = createStore(todoApp, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
-const unsubscribe = store.subscribe(() => {
-  console.log("store was changed:", store.getState());
-});
-
 store.dispatch(addTodo("Lol"));
 store.dispatch(addTodo("Kek"));
 store.dispatch(addTodo("Cheburek"));

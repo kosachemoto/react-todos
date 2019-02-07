@@ -1,20 +1,18 @@
 import React from 'react';
 import './FilterLink.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const FilterLink = ({ filter, title, onClick }) => (
-  <Link
+  <NavLink
     to={filter === 'SHOW_ALL' ? '' : filter}
+    onClick={onClick}
+    className="filter-link"
     activeStyle={{
-      color: "blue"
+      color: "green"
     }}
   >
-    <div
-      className="filter-link"
-      onClick={onClick}>
-      {title}
-    </div>
-  </Link>
+    {title}
+  </NavLink>
 );
 
 export default FilterLink;

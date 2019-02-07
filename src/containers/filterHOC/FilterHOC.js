@@ -3,21 +3,18 @@ import Filter from './../../components/filter/Filter';
 import { setVisibilityFilter, VisibilityFilters } from './../../actions';
 
 const mapStateToProps = (state) => {
-  return {
-    filters: state
-  }
+  return state;
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
     setVisibilityFilter: (filter) => {
-      console.log("filter:", filter);
       dispatch(setVisibilityFilter(filter))}
   }
 }
 
 const FilterHOC = connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Filter);
 
