@@ -13,6 +13,10 @@
   text-decoration: none;
 }
 
+.filter-link_active {
+  font-weight: bold;
+}
+
 .filter-link:last-child {
   margin-bottom: 0px;
 }

@@ -15,6 +15,7 @@ function Filter({setVisibilityFilter}) {
           key={filter.id} 
           title={filter.title} 
           filter={filter.name}
+          path={filter.path}
           onClick={() => {setVisibilityFilter(filter.name)}} />
         )})}
     </div>

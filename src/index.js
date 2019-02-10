@@ -4,12 +4,23 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import todoApp from './reducers';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import { addTodo } from './actions';
 import Root from './components/root/Root';
+import { createLogger } from 'redux-logger';
 
-let store = createStore(todoApp, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+let composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+let loggerMiddleware = createLogger();
+
+let store = createStore(
+    todoApp,
+    composeEnhancers(
+      applyMiddleware(
+        loggerMiddleware
+      )
+    )
+  );
 
 store.dispatch(addTodo("Lol"));
 store.dispatch(addTodo("Kek"));

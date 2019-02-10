@@ -1,13 +1,14 @@
 .todo {
   transition: width .075s, background-color .075s;
-  width: 300px;
+  width: 350px;
   padding: 15px;
   margin-bottom: 5px;
   cursor: pointer;
 }
 
 .todo:hover {
-  width: 320px;
+  width: 370px;
+  padding-right: 35px;
 }
 
 .todo__status {

@@ -15,7 +15,8 @@ function AddTodo({onAddTodo}) {
       <input 
         type="text" 
         className="add-todo__input" 
-        onKeyDown={e => keyDownHandler(e, onAddTodo)} />
+        onKeyDown={e => keyDownHandler(e, onAddTodo)} 
+      />
     </div>
   )
 }

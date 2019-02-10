@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import TodoListHOC from './containers/todoListHOC/TodoListHOC';
 import AddTodoHOC from './containers/addTodoHOC/AddTodoHOC';
@@ -11,7 +11,7 @@ const App = (props) => {
       <FilterHOC />
       <AddTodoHOC />
       <TodoListHOC 
-        filter={ props.match.params.filter || "SHOW_ALL" }
+        filter={ props.match.params.path || "SHOW_ALL" }
       />
     </div>
   );
