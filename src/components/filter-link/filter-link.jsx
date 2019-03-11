@@ -1,8 +1,8 @@
 import React from 'react';
-import './FilterLink.css';
 import { NavLink } from 'react-router-dom';
+import './filter-link.css';
 
-const FilterLink = ({ filter, path, title, onClick }) => {
+export const FilterLink = ({ filter, path, title, onClick }) => {
   return (
     <NavLink
       to={`${process.env.PUBLIC_URL}/${path}`}
@@ -14,5 +14,3 @@ const FilterLink = ({ filter, path, title, onClick }) => {
     </NavLink>
   );
 }
-
-export default FilterLink;

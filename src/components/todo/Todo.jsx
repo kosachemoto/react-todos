@@ -1,7 +1,7 @@
 import React from 'react';
-import './Todo.css';
+import './todo.css';
 
-function Todo({data, onClick}) {
+export const Todo = ({data, onClick}) => {
 
   const message = data.text;
   const status = data.completed ? "COMPLETED" : "UNCOMPLETED";
@@ -19,5 +19,3 @@ function Todo({data, onClick}) {
     </div>
   )
 }
-
-export default Todo;

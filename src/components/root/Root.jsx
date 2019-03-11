@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
-import App from './../../App';
+import { App } from '../../components';
 
-const Root = ({store}) => {
+export const Root = ({store}) => {
   return (
     <Provider store={store}>
       <BrowserRouter>
@@ -15,5 +15,3 @@ const Root = ({store}) => {
     </Provider>
   )
 }
-
-export default Root;

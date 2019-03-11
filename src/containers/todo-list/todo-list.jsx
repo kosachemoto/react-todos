@@ -1,6 +1,18 @@
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import TodoList from '../../components/todoList/TodoList';
 import { toggleTodo } from '../../actions';
+import { Todo } from '../../components';
+
+const TodoList = ({todos, toggleTodo, filter}) => {
+  return (
+    <>
+      {todos.map((todo, index) => {
+        return <Todo key={todo.id} data={todo} onClick={() => {toggleTodo(todo.id)}} />
+        // return <TodoHOC key={todo.id}  />
+      })}
+    </> 
+  )
+}
 
 const getVisibleTodos = (todos, filter) => {
   switch(filter) {
@@ -26,9 +38,7 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-const TodoListHOC = connect(
+export const TodoListContainer = connect(
   mapStateToProps,
   mapDispatchToProps
 )(TodoList);
-
-export default TodoListHOC;
